@@ -1,0 +1,664 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>PPD High School | Vocational Admission 2026 | WBSCVET</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4fc;
+            color: #0a2b44;
+            scroll-behavior: smooth;
+        }
+
+        /* blue & white theme */
+        :root {
+            --primary-blue: #0a5c8e;
+            --dark-blue: #043b5c;
+            --accent-blue: #1e88e5;
+            --pure-white: #ffffff;
+            --light-bg: #eef3fc;
+            --shadow-sm: 0 12px 28px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 20px 30px -12px rgba(0, 20, 40, 0.15);
+        }
+
+        /* header & navigation */
+        .top-header {
+            background: var(--pure-white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+        }
+
+        .council-logo {
+            height: 65px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .school-title h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--dark-blue);
+            line-height: 1.2;
+        }
+
+        .school-title p {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--primary-blue);
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--dark-blue);
+            transition: 0.2s;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .admission-btn-nav {
+            background: var(--primary-blue);
+            color: white !important;
+            padding: 8px 22px;
+            border-radius: 40px;
+            box-shadow: 0 3px 8px rgba(10,92,142,0.2);
+        }
+
+        .admission-btn-nav:hover {
+            background: #074e77;
+            transform: scale(1.02);
+        }
+
+        /* hero section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #e3f0fa 100%);
+            padding: 50px 24px;
+        }
+
+        .hero-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1.2;
+        }
+
+        .hero-badge {
+            background: var(--primary-blue);
+            color: white;
+            display: inline-block;
+            padding: 5px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h2 {
+            font-size: 44px;
+            font-weight: 800;
+            color: var(--dark-blue);
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #2c4b6e;
+            max-width: 550px;
+            margin-bottom: 25px;
+        }
+
+        .seat-alert {
+            background: #fff0db;
+            border-left: 6px solid #ff9800;
+            padding: 12px 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        .hero-img {
+            flex: 0.9;
+            border-radius: 36px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 320px;
+            background: url('https://picsum.photos/id/20/700/450') center/cover no-repeat;
+        }
+
+        /* general sections */
+        .container {
+            max-width: 1400px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--dark-blue);
+            margin-bottom: 32px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: var(--accent-blue);
+            border-radius: 4px;
+        }
+
+        /* teacher table */
+        .teacher-card {
+            background: var(--pure-white);
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin-top: 20px;
+        }
+
+        .teacher-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        .teacher-table th {
+            background: var(--dark-blue);
+            color: white;
+            padding: 18px 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .teacher-table td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #e2edf7;
+            vertical-align: top;
+        }
+
+        .teacher-table tr:hover td {
+            background: #f5faff;
+        }
+
+        .special-badge {
+            background: #eef2ff;
+            color: var(--primary-blue);
+            border-radius: 50px;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        /* semester grid */
+        .sem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin: 40px 0;
+        }
+
+        .sem-card {
+            background: white;
+            border-radius: 28px;
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            border-top: 5px solid var(--primary-blue);
+            transition: 0.2s;
+        }
+
+        .sem-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .sem-card h4 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--dark-blue);
+        }
+
+        .exam-center {
+            background: #eef3fc;
+            border-radius: 24px;
+            padding: 24px;
+            margin: 25px 0;
+        }
+
+        /* gallery */
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            flex: 1 1 220px;
+            height: 200px;
+            border-radius: 28px;
+            background-size: cover;
+            background-position: center;
+            transition: 0.3s;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        /* modal form */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 550px;
+            width: 90%;
+            border-radius: 40px;
+            padding: 32px;
+            box-shadow: 0 30px 40px rgba(0,0,0,0.2);
+            animation: fadeUp 0.3s ease;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        .modal-content h3 {
+            font-size: 28px;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #cbdde9;
+            border-radius: 28px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary-blue);
+        }
+
+        .submit-btn {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .close-modal {
+            background: #eef2ff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        footer {
+            background: #04273e;
+            color: #cfe3f5;
+            padding: 48px 24px 24px;
+            margin-top: 70px;
+        }
+
+        .footer-flex {
+            max-width: 1400px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 13px;
+            border-top: 1px solid #1c4a6e;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 800px) {
+            .hero-content h2 { font-size: 32px; }
+            .teacher-table th, .teacher-table td { padding: 12px; font-size: 13px; }
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-primary:hover {
+            background: #074e77;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<header class="top-header">
+    <div class="nav-container">
+        <div class="logo-area">
+            <!-- council logo placeholder but realistic -->
+            <img class="council-logo" src="https://upload.wikimedia.org/wikipedia/commons/4/49/WBSCVET_logo.jpg" alt="WBSCVET Logo" onerror="this.src='https://placehold.co/80x80?text=WBSCVET&bg=0a5c8e&textColor=white';">
+            <div class="school-title">
+                <h1>PPD High School</h1>
+                <p>Vocational Department | Affiliated to WBSCVET & SD</p>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#teachers">Faculty</a>
+            <a href="#course">Curriculum</a>
+            <a href="#admission-info">Admission</a>
+            <a href="#gallery">Campus</a>
+            <a href="#" id="openModalBtn" class="admission-btn-nav"><i class="fas fa-edit"></i> Apply Now</a>
+        </div>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-grid">
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-chalkboard-user"></i> WBSCVET & SD Recognised</div>
+            <h2>Shape Your Career <br>with Skill & Excellence</h2>
+            <p>Two years vocational program (Class 11 & 12) • 4 Semesters • Limited seats (30) • Practical training & council certification.</p>
+            <div class="seat-alert">
+                <i class="fas fa-chair"></i> <strong>Only 30 seats available</strong> for 2026-2028 session. First come first serve.
+            </div>
+            <button class="btn-primary" id="heroApplyBtn"><i class="fas fa-file-alt"></i> Apply for Admission →</button>
+        </div>
+        <div class="hero-img" style="background-image: url('https://picsum.photos/id/183/800/500');"></div>
+    </div>
+</section>
+
+<!-- Teachers Table section -->
+<div class="container" id="teachers">
+    <h2 class="section-title"><i class="fas fa-chalkboard"></i> Our Expert Faculty</h2>
+    <div class="teacher-card">
+        <table class="teacher-table">
+            <thead>
+                <tr><th>Teacher Name</th><th>Subject / Role</th><th>Special Classes / Highlights</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Shibaji Mitra</strong></td><td>English Teacher</td><td>🎤 <span class="special-badge">Special Spoken English Class every Friday</span> – communication & personality development</td></tr>
+                <tr><td><strong>Jayanta Ghosh</strong></td><td>Computer Teacher</td><td>💻 <span class="special-badge">Programming Languages (Python, Java, Web Dev) & Special IT Classes</span> – extra coding workshops</td></tr>
+                <tr><td><strong>Chanchal Majhi</strong></td><td>Bengali Teacher</td><td>📖 Language & Literature, creative writing, grammar excellence</td></tr>
+                <tr><td><strong>Sk Abu Talib</strong></td><td>Math, Physics & Chemistry</td><td>⚛️ Integrated Science & Mathematics for competitive vocational syllabus</td></tr>
+                <tr><td><strong>Kiran Madhu</strong></td><td>Carpentry Instructor</td><td>🪑 <span class="special-badge">Special Karpenter Class</span> – practical woodworking, furniture design</td></tr>
+                <tr><td><strong>Afroza Khatun</strong></td><td>Technical Drawing Madam</td><td>📐 Engineering Drawing, CAD basics, blueprint reading</td></tr>
+                <tr><td><strong>Ranjan Maity</strong></td><td>Head of Institute (Principal)</td><td>🏫 Overall academic & administrative head, career guidance</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Course & Semester Structure -->
+<div class="container" id="course">
+    <h2 class="section-title"><i class="fas fa-layer-group"></i> Course Structure (2 Years / 4 Semesters)</h2>
+    <div class="sem-grid">
+        <div class="sem-card"><h4>Semester 1</h4><p><strong>Class 11</strong> • Fundamentals, English, Math-I, Workshop Practice</p><p><i class="fas fa-map-marker-alt"></i> Exam: <strong>Home Centre</strong> (PPD High School)</p></div>
+        <div class="sem-card"><h4>Semester 2</h4><p><strong>Class 11</strong> • Applied Physics, Computer Apps, Technical Drawing, Bengali</p><p><i class="fas fa-map-marker-alt"></i> Exam: <strong>Home Centre</strong> (PPD High School)</p></div>
+        <div class="sem-card"><h4>Semester 3</h4><p><strong>Class 12</strong> • Advanced IT, Carpentry Tech, Vocational Elective, EVS</p><p><i class="fas fa-map-marker-alt"></i> Exam: <strong>Out Centre</strong> → Kurumba High School</p></div>
+        <div class="sem-card"><h4>Semester 4</h4><p><strong>Class 12</strong> • Project Work, Entrepreneurship, Final Practicals</p><p><i class="fas fa-map-marker-alt"></i> Exam: <strong>Out Centre</strong> → Kurumba High School</p></div>
+    </div>
+    <div class="exam-center">
+        <i class="fas fa-building-columns" style="font-size: 28px; color: #0a5c8e;"></i>
+        <h3>📌 Examination Centers (as per WBSCVET & SD)</h3>
+        <p><strong>Semester 1 & 2 (Class 11):</strong> PPD High School, Ausgram (Home Centre)<br>
+        <strong>Semester 3 & 4 (Class 12):</strong> Kurumba High School, Near Srikrishnapur (External Centre)<br>
+        ✅ All students receive joint certification from West Bengal State Council of Vocational Education & Training and Skill Development.</p>
+    </div>
+</div>
+
+<!-- Admission details + seats + button triggers modal -->
+<div class="container" id="admission-info">
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Admission 2026 - Vocational Stream</h2>
+    <div style="background: white; border-radius: 32px; padding: 32px; box-shadow: var(--shadow-sm);">
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
+            <div><i class="fas fa-users" style="font-size: 40px; color: var(--primary-blue);"></i><br><strong>Total Intake</strong><br><span style="font-size: 28px; font-weight: 800;">30 Seats</span><br>Eligibility: Class 10 passed</div>
+            <div><i class="fas fa-calendar-alt" style="font-size: 40px; color: var(--primary-blue);"></i><br><strong>Course Duration</strong><br>2 years (Class 11 & 12)<br>4 semesters | Full time</div>
+            <div><i class="fas fa-file-certificate" style="font-size: 40px; color: var(--primary-blue);"></i><br><strong>Council</strong><br>WBSCVET & Skill Development<br>Govt. recognized</div>
+        </div>
+        <hr style="margin: 28px 0; border-color: #e2edf7;">
+        <p><strong>📍 Location:</strong> Near Srikrishnapur, Ausgram, Purba Bardhaman, West Bengal – 713128. (Just 2 km from Srikrishna Temple)</p>
+        <p><strong>📞 For queries:</strong> +91 98765 43210 / ppdadmission@wbscvet.in</p>
+        <button class="btn-primary" id="infoApplyBtn" style="margin-top: 30px;"><i class="fas fa-pen-fill"></i> Fill Application Form</button>
+    </div>
+</div>
+
+<!-- Gallery / School Images -->
+<div class="container" id="gallery">
+    <h2 class="section-title"><i class="fas fa-camera"></i> Campus & Workshops</h2>
+    <div class="gallery-grid">
+        <div class="gallery-item" style="background-image: url('https://picsum.photos/id/159/400/300');"></div>
+        <div class="gallery-item" style="background-image: url('https://picsum.photos/id/20/400/300');"></div>
+        <div class="gallery-item" style="background-image: url('https://picsum.photos/id/26/400/300');"></div>
+        <div class="gallery-item" style="background-image: url('https://picsum.photos/id/169/400/300');"></div>
+        <div class="gallery-item" style="background-image: url('https://picsum.photos/id/152/400/300');"></div>
+        <div class="gallery-item" style="background-image: url('https://picsum.photos/id/28/400/300');"></div>
+    </div>
+    <p style="text-align: center; margin-top: 24px; color: #2c4b6e;"><i class="fas fa-school"></i> Modern classrooms | Computer lab | Carpentry workshop | Playground | Library</p>
+</div>
+
+<!-- MODAL APPLICATION FORM (opens on button click) -->
+<div id="applicationModal" class="modal">
+    <div class="modal-content">
+        <h3><i class="fas fa-address-card"></i> Admission Application Form</h3>
+        <p style="margin-bottom: 16px;">Vocational Department (Session 2026-28) | Limited seats: 30</p>
+        <form id="admissionForm">
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="fullName" required placeholder="e.g. Rohan Das">
+            </div>
+            <div class="form-group">
+                <label>Father's Name</label>
+                <input type="text" id="fatherName" placeholder="Required">
+                </div>
+            <div class="form-group">
+                <label>Class Applying For</label>
+                <select id="applyingClass">
+                    <option>Class 11 (Vocational)</option>
+                    <option>Class 12 (Vocational) – lateral entry</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mobile Number *</label>
+                <input type="tel" id="mobile" required placeholder="10 digit number">
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <input type="text" id="address" placeholder="Near Srikrishnapur, Ausgram ...">
+            </div>
+            <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Application</button>
+            <button type="button" class="close-modal" id="closeModalBtn" style="width: 100%; margin-top: 12px;">Close</button>
+        </form>
+        <p style="font-size: 12px; margin-top: 15px; color: gray;">* After submission, school office will contact you for document verification.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-flex">
+        <div class="footer-col">
+            <h4>PPD High School (Vocational)</h4>
+            <p>Vill: Srikrishnapur, Ausgram, Purba Bardhaman, West Bengal - 713128</p>
+            <p><i class="fas fa-phone-alt"></i> 0342 123 4567 | +91 90070 12345</p>
+            <p><i class="fas fa-envelope"></i> ppdvoc@wbscvet.org</p>
+        </div>
+        <div class="footer-col">
+            <h4>Council Affiliation</h4>
+            <p>West Bengal State Council of Technical & Vocational Education and Skill Development (WBSCVET&SD)</p>
+            <p>Recognised by Govt. of West Bengal</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/WBSCVET_logo.jpg" alt="Council Logo" style="height: 45px; margin-top: 10px; background: white; border-radius: 12px; padding: 4px;" onerror="this.style.display='none'">
+        </div>
+        <div class="footer-col">
+            <h4>Important Links</h4>
+            <p><a href="#" style="color:#b9d9ff;">Admission Prospectus</a></p>
+            <p><a href="#" style="color:#b9d9ff;">Exam Routine (Semester)</a></p>
+            <p><a href="#" style="color:#b9d9ff;">Syllabus WBSCVET</a></p>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2026 PPD High School Vocational Department | Under the Council of WBSCVET & Skill Development | All Rights Reserved
+    </div>
+</footer>
+
+<script>
+    // Modal handling
+    const modal = document.getElementById('applicationModal');
+    const openBtns = document.querySelectorAll('#openModalBtn, #heroApplyBtn, #infoApplyBtn');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    function openModal() {
+        modal.style.display = 'flex';
+    }
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    });
+
+    if(closeBtn) closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+        if(e.target === modal) closeModal();
+    });
+
+    // form submission demo
+    const admissionForm = document.getElementById('admissionForm');
+    if(admissionForm) {
+        admissionForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('fullName')?.value.trim();
+            if(!name) {
+                alert("Please fill your full name");
+                return;
+            }
+            alert(`✅ Thank you ${name}, your application has been received! School will contact you within 3 days. Seat booking is provisional.`);
+            closeModal();
+            admissionForm.reset();
+        });
+    }
+
+    // smooth scroll for internal nav links
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId && targetId !== "#") {
+                e.preventDefault();
+                const targetElem = document.querySelector(targetId);
+                if(targetElem) targetElem.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
+  
